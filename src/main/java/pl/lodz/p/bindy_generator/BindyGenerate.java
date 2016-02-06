@@ -9,7 +9,6 @@ import org.apache.maven.plugins.annotations.Parameter;
 /**
  * Goal which touches a timestamp file.
  *
- * @deprecated Don't use!
  */
 @Mojo(name = "generate", defaultPhase = LifecyclePhase.PROCESS_SOURCES)
 public class BindyGenerate extends AbstractMojo {
