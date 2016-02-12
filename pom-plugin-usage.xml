@@ -19,9 +19,12 @@
                 <artifactId>bindy-generator-maven-plugin</artifactId>
                 <version>1.0</version>
                 <configuration>
+                    <outputDir>${project.build.testSourceDirectory}</outputDir>
                     <files>
                         <csv>
                             <fileName>order.csv</fileName>
+                            <className>Order</className>
+                            <separator>,</separator>
                         </csv>
                     </files>
                 </configuration>
