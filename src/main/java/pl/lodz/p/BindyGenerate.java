@@ -58,6 +58,11 @@ public class BindyGenerate extends AbstractMojo {
         if (file instanceof Csv) {
             Csv csvFile = (Csv) file;
             arguments.append("-s").append(SPACE).append(csvFile.getSeparator()).append(SPACE);
+
+            if (((Csv) file).isSkipFirstLine()) {
+                arguments.append("--skipFirstLine");
+            }
+
         }
 
         return arguments.toString().trim().split(SPACE);
